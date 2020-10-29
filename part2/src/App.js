@@ -40,6 +40,10 @@ const App = () => {
 				setNewName("")
 				setNewNumber("")
 			})
+			.catch((err) => {
+				console.log(err.response.data);
+				showNotif(err.response.data.error);
+			})
 		}
 	}
 
